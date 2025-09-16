@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrise Academy</title>
+    <link rel="stylesheet" href="Css/Style.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Sunrise Academy</div>
+                <div class="nav-links">
+                    <a href="#">Home</a>
+                    <a href="./about.html">About Us</a>
+                    <a href="./admission.html">Admissions</a>
+                    <a href="./Programs.html">Programs</a>
+                    <a href="./contact.html">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1 class="fade-in-up">Welcome to <span>Sunrise Academy</span></h1>
+        <p class="fade-in-up">Empowering students to achieve academic excellence and become lifelong learners.</p>
+    </section> 
+
+    <!--  Announcements -->
+    <section class="announcements container">
+        <div class="welcome_info fade-in-up">
+            <br><br>
+            <h2 class="fade-in-up">Sunrise Academy!</h2>
+            <p class="fade-in-up">At Sunrise Academy, we are dedicated to providing a nurturing and stimulating environment where students can thrive academically, socially, and personally. Our experienced faculty, 
+            comprehensive curriculum, and state-of-the-art facilities ensure that every student receives a well-rounded education that prepares them for future success.</p>
+            <p class="fade-in-up">Explore our website to learn more about our programs, admissions process, and the vibrant community that makes Sunrise Academy a special place to learn and grow.</p>
+            <strong class="fade-in-up" >Location </strong>
+            <p class="fade-in-up">Beposo-Dunkwa, Western Region, Ghana.</p>
+            <strong class="fade-in-up" >Contact </strong>   
+            <p class="fade-in-up"> +233 240 275 165 | Email: khyibura@outlook.com</p>
+            
+        </div>
+        
+    </section> 
+
+    <!-- Blog/Updates Section -->
+    <section class="announcements container ">
+        <div class="container">
+            <br><br>
+            <h2 class="fade-in-up">Latest News & Updates</h2>
+            <div class="blog-grid">
+
+                <div class="announcement-item fade-in-up">
+                    <h3>🎓 New Academic Year Begins</h3>
+                    <p class="date">September 2, 2025</p>
+                    <p>We welcomed our new and returning students this week with a special assembly and a warm welcome
+                        from our principal.</p>
+                    <!-- <a href="#">Read More</a> -->
+                </div>
+
+                <div class="announcement-item fade-in-up">
+                    <h3>📢 Parent-Teacher Association</h3>
+                    Parent-Teacher Meeting scheduled for September 20th. <br>
+                    <strong>Agenda</strong>
+                    <ul>
+                        <li>School updates and upcoming events</li>
+                        <li>Student performance review</li>
+                        <li>Open forum for parent questions and feedback</li>
+
+                    </ul>
+                    <!-- <p class="date">August 25, 2025</p>  -->
+                </div>
+
+                <div class="announcement-item fade-in-up">
+                    <h3>🏆 Science Fair 2025 Winners</h3>
+                    <p class="date">August 21, 2025</p>
+                    <p>Congratulations to all the budding scientists who participated in this year's fair! Check out the
+                        winners and photos from the event.</p>
+                    <!-- <a href="#">Read More</a> -->
+                </div>
+
+                <div class="announcement-item fade-in-up">
+                    <h3>📣 Admissions Open for 2026</h3>
+                    <p class="date">July 15, 2025</p>
+                    <p>Applications for the next academic year are now open! Visit our Admissions page to learn more and
+                        apply online.</p>
+                    <a href="admission.html#form">Apply For Admission</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Gallery Preview Section -->
+    <section class="home-gallery fade-in-up">
+        <div class="container fade-in-up">
+            <h2 class="fade-in-up">Snapshots from School Life</h2>
+            <div class="gallery-preview fade-in-up">
+                <img src="./images/IMG-20231130-WA0003.jpg" class="fade-in-up" alt="Science Fair">
+                <img src="./images/IMG-20231130-WA0003.jpg" class="fade-in-up" alt="Sports Day">
+                <img src="./images/IMG-20231130-WA0003.jpg" class="fade-in-up" alt="Art Show">
+            </div>
+            <div class="view-more">
+                <a href="./Gallary.html" class="btn">View More</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Sunrise Academy. All Rights Reserved. | Contact: info@sunriseacademy.edu</p>
+    </footer>
+</body>
+
+
+
+
+
+
+
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Only animate once
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    document.querySelectorAll('.fade-in-up').forEach(el => {
+        observer.observe(el);
+    });
+
+
+
+
+    // background image rotation
+    const heroSection = document.querySelector('.hero');
+
+    const images = [
+        '../images/IMG-20231130-WA0003.jpg',
+        '../images/caldeer-1.jpg',
+        '../images/caldeer-2.jpg',
+        '../images/caldeer-3.jpg',
+        '../images/caldeer-4.jpg',
+        '../images/caldeer-9.jpg'
+    ];
+
+    let currentIndex = 0;
+
+    function updateHeroBackground() {
+        heroSection.style.opacity = 0;
+
+        setTimeout(() => {
+            const currentImage = images[currentIndex];
+            heroSection.style.backgroundImage = `
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url('${currentImage}')
+        `;
+            heroSection.style.opacity = 2;
+
+            currentIndex = (currentIndex + 1) % images.length;
+        }, 500); // Wait half a second before switching
+    }
+
+
+    // Initial load
+    updateHeroBackground();
+
+    // Change image every 10 seconds
+    setInterval(updateHeroBackground, 10000);
+</script>
+
+
+</html>

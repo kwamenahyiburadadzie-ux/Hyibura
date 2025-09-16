@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="fade-in-up">Sunrise Academy</title>
+    <link rel="stylesheet" href="Css/about.css">
+</head>
+<body>
+    <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Sunrise Academy</div>
+        <div class="nav-links">
+          <a href="./index.html">Home</a>
+          <a href="#">About Us</a>
+          <a href="./admission.html">Admissions</a>
+          <a href="./Programs.html">Programs</a>
+          <a href="./contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Staff Directory -->
+  <div class="staff-directory">
+      <h1 class="fade-in-up">About Sunrise Academy</h1>
+    <h2 class="fade-in-up">Meet Our Admissions Team</h2>
+    <div class="staff-cards">
+
+      <div class="staff-card fade-in-up">
+        <img src="../All folders/pics/flowers/Camera/IMG_20250316_120012_464.jpg" alt="Principal">
+        <h3>Mr. Hyibura Dadzie</h3>
+        <p>Principal</p>
+        <p>Email: khyibura@outlook.com</p>
+        <p>Phone: +233 240 275 165</p>
+      </div>
+
+      <div class="staff-card fade-in-up">
+        <img src="../All folders/pics/flowers/Camera/IMG_20241024_193936_730.jpg" alt="Admin Officer">
+        <h3>Mr. Louis Quophy</h3>
+        <p>Admissions Officer</p>
+        <p>Email: Mquophy1@gmail.com</p>
+        <p>Phone: +233 240 275 165</p>
+      </div>
+
+      <div class="staff-card fade-in-up">
+        <img src="./images/IMG-20231130-WA0003.jpg" alt="Coordinator">
+        <h3>Ms. Nancy Aidoo </h3>
+        <p>Academic Coordinator</p>
+        <p>Email: Naidoo12@outlook.com</p>
+        <p>Phone: +233 240 275 165</p>
+      </div>
+
+    </div>
+  </div>
+
+  
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="container about-content">
+      <h2 class="fade-in-up">Our History</h2>
+      <p class="fade-in-up">
+        Founded in 1998, Sunrise Academy has grown from a small local school to a thriving institution known for academic excellence, innovation, and a strong sense of community. Over the past two decades, we’ve expanded our facilities, introduced modern learning techniques, and built a dedicated team of educators who inspire and empower.
+      </p>
+
+      <h2 class="fade-in-up">Our Mission</h2>
+      <p class="fade-in-up">
+        At Sunrise Academy, our mission is to provide a nurturing and inclusive environment where every student can discover their potential. We are committed to delivering a high-quality education that prepares students not only for academic success but for life beyond the classroom.
+      </p>
+
+      <h2 class="fade-in-up">Our Vision</h2>
+      <p class="fade-in-up">
+        We envision a future where Sunrise Academy students are confident, compassionate, and capable leaders who contribute positively to society. Our goal is to be a leading institution that blends tradition with innovation to shape future-ready learners.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-media">
+  <a href="https://facebook.com/sunriseacademy" target="_blank" aria-label="Facebook">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook">
+  </a>
+  <a href="https://twitter.com/sunriseacademy" target="_blank" aria-label="Twitter">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter">
+  </a>
+  <a href="https://instagram.com/sunriseacademy" target="_blank" aria-label="Instagram">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram">
+  </a>
+  <a href="https://youtube.com/sunriseacademy" target="_blank" aria-label="YouTube">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube">
+  </a>
+</div>
+
+    <p>&copy; 2025 Sunrise Academy. All Rights Reserved. | Contact: info@sunriseacademy.edu</p>
+  </footer>
+
+</body>
+
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // Animate once
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.fade-in-up').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+</html>
+
+
+

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - Sunrise Academy</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #004080;
+            color: #fff;
+            padding: 1rem 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .gallery-section {
+            background: #fff;
+            padding: 3rem 1rem;
+        }
+
+        .gallery-section h1 {
+            text-align: center;
+            color: #004080;
+            margin-bottom: 2rem;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .video-grid iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        footer {
+            background: #00264d;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        .social-media {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-media img {
+            width: 24px;
+            height: 24px;
+            filter: invert(1);
+            transition: transform 0.2s;
+        }
+
+        .social-media img:hover {
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            body{
+                font-size: 14px;
+            }
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+                margin-top: 1rem;
+            }
+
+            .video-grid iframe {
+                height: 180px;
+            }
+        }
+
+        /* Scroll Animation */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 2s ease-out, transform 3s ease-out;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Sunrise Academy</div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="admission.html">Admissions</a>
+                    <a href="programs.html">Programs</a>
+                    <a href="contact.html">Contact</a>
+                    <!-- <a href="gallery.html">Gallery</a> -->
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <h1 class="fade-in-up">Our School in Pictures & Videos</h1>
+
+            <!-- Photo Gallery -->
+            <h2 class="fade-in-up">Photo Gallery</h2>
+            <div class="photo-grid">
+                <img class="fade-in-up" src="../All folders/pics/flowers/Camera/IMG_20241109_163334_745.jpg" alt="Annual Day">
+                <img class="fade-in-up" src="../All folders/pics/flowers/Camera/IMG_20241001_121415_413.jpg" alt="Science Fair">
+                <img class="fade-in-up" src="../All folders/pics/flowers/Camera/IMG_20241009_173650_062.jpg" alt="Sports Day">
+                <img class="fade-in-up" src="../All folders/pics/flowers/Camera/IMG_20241109_131733_663.jpg" alt="Classroom Activity">
+                <img class="fade-in-up" src="../All folders/pics/flowers/Camera/IMG_20250306_062711_623.jpg" alt="Art Exhibition">
+                <img class="fade-in-up" src="../All folders/pics/flowers/Camera/IMG_20241109_163334_745.jpg" alt="Excursion Trip">
+            </div>
+
+            <!-- Video Gallery -->
+            <h2 class="fade-in-up">Videos from Our Events</h2>
+            <div class="video-grid">
+                <iframe class="fade-in-up" src="../All folders/pics/Drama/Mmabun Bisa Sɛ—Ɛdɛn Na Mede M’asetena Bɛyɛ.mp4" title="School Promo Video"></iframe>
+                <iframe class="fade-in-up" src="../All folders/pics/Drama/Ɔdɔ Kann—Ɛne Deɛn.mp4" title="Sports Day Highlights"></iframe>
+                <iframe class="fade-in-up" src="../All folders/pics/Drama/“Commit Your Way to Jehovah”—Part 2.mp4" title="Sports Day Highlights"></iframe>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Sunrise Academy. All Rights Reserved. | Email: info@sunriseacademy.edu</p>
+        <div class="social-media">
+            <a href="https://facebook.com/sunriseacademy" target="_blank"><img
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook"></a>
+            <a href="https://twitter.com/sunriseacademy" target="_blank"><img
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter"></a>
+            <a href="https://instagram.com/sunriseacademy" target="_blank"><img
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"></a>
+            <a href="https://youtube.com/sunriseacademy" target="_blank"><img
+                    src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube"></a>
+        </div>
+    </footer>
+
+</body>
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Animate once
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    document.querySelectorAll('.fade-in-up').forEach(el => {
+        observer.observe(el);
+    });
+</script>
+
+</html>
